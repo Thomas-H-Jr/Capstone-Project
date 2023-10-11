@@ -2,7 +2,11 @@ import React from "react";
 import logo from "./Logo.svg";
 
 function Header() {
-  return <img className="logo" src={logo} alt="Logo" />;
+  return (
+    <a href="/Homepage">
+      <img className="logo" src={logo} alt="Logo" />
+    </a>
+  );
 }
 
 export default Header;
