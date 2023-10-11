@@ -3,9 +3,9 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <section>
+      <section className="footer">
         <h3>Little Lemon</h3>
-        <ul>
+        <ul className="footer-nav">
           <li>
             <a href="#home">Home</a>
           </li>
@@ -25,11 +25,9 @@ function Footer() {
             <a href="/login">Login</a>
           </li>
         </ul>
-      </section>
 
-      <section>
         <h3>Contact Us</h3>
-        <ul>
+        <ul className="contact-us">
           <li>
             <a href="#phone">Phone</a>
           </li>
@@ -40,11 +38,9 @@ function Footer() {
             <a href="#email">Email</a>
           </li>
         </ul>
-      </section>
 
-      <section>
         <h3>Social Media</h3>
-        <ul>
+        <ul className="socials">
           <li>
             <a href="#twitter">Twitter</a>
           </li>

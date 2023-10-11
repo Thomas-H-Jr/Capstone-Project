@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 10%;
+  height: auto;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  font-size: 1.5rem;
+  font-family: karla;
+}
+
+.hero-section {
+  background-color: #495e57;
+}
+
+.summary {
+  color: #edefee;
+  font-family: karla;
+  font-size: 2rem;
+}
+
+.hero-section,
+img {
+  width: 40%;
+  height: auto;
+}
+
+.footer,
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.restaurant {
+  color: #f4ce14;
+  font-size: 3rem;
+  font-family: markazi;
+}
+
+.city {
+  font-family: markazi;
+  color: #edefee;
+  font-size: 2.5rem;
+}
