@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./ButtonComponent"
 import FoodCard from "./FoodCard"
 import TestimonialCard from "./TestimonialCard";
 import AboutA from "./Pictures/AboutA.jpg"
@@ -16,14 +17,15 @@ function HomePage() {
           We are a family owned Medditerranean restaurant, focused on
           traditional recipes served with a modern twist.
         </p>
+        <Button className="reserve-button">Reserve Table</Button>
         <img className="hero-image" src={heroFood} alt="food presentation" />
       </section>
       <section className="weekly-specials">
-      <h2>This weeks specials!</h2>
+      <h2 className="specials-title">This weeks specials!</h2>
      <FoodCard />
       </section>
       <section className="testimonials">
-        <h2>Testimonials</h2>
+        <h2 className="specials-title">Testimonials</h2>
         <TestimonialCard />
       </section>
       <section className="about-section">

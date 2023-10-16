@@ -29,6 +29,17 @@
   font-size: 2rem;
 }
 
+.reserve-button {
+  background-color: #f4ce14;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.reserve-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .hero-image {
   width: 20%;
   height: auto;
@@ -46,8 +57,24 @@
   height: 200px;
 }
 
+.specials-title {
+text-align: center;
+}
+
+.testimonial-title{
+text-align: center;
+}
+
 .testimonials {
 background-color: #edefee;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.testimonial-pic {
+  width: 10%;
+  height: auto;
 }
 
 .about-pic1, .about-pic2 {
