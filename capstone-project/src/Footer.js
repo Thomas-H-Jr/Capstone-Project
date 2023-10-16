@@ -3,8 +3,9 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <section className="footer">
-        <h3>Little Lemon</h3>
+    <div className="footer">
+      <section className="footer1">
+      <h3>Little Lemon</h3>
         <ul className="footer-nav">
           <li>
             <a href="#home">Home</a>
@@ -25,7 +26,8 @@ function Footer() {
             <a href="/login">Login</a>
           </li>
         </ul>
-
+      </section>
+        <section className="footer2">
         <h3>Contact Us</h3>
         <ul className="contact-us">
           <li>
@@ -38,7 +40,8 @@ function Footer() {
             <a href="#email">Email</a>
           </li>
         </ul>
-
+        </section>
+        <section className="footer3">
         <h3>Social Media</h3>
         <ul className="socials">
           <li>
@@ -51,7 +54,8 @@ function Footer() {
             <a href="facebook">facebook</a>
           </li>
         </ul>
-      </section>
+        </section>
+        </div>
     </>
   );
 }
