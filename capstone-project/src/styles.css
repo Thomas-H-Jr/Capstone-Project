@@ -59,10 +59,6 @@
   margin: 20px 250px 20px 0
 }
 
-.weekly-specials {
-
-}
-
 .specials-header {
   display: flex;
   justify-content: space-around;
@@ -74,12 +70,15 @@
 
 .specials-title {
   font-size: 3rem;
+  text-align: left;
+  font-family: markazi;
 }
 
 .menu-button {
 background-color: #f4ce14;
 font-size: 3em;
 border-radius: 8px;
+font-family: karla;
 }
 
 .foodcard-layout {
@@ -93,6 +92,7 @@ border-radius: 8px;
   font-family: karla;
   font-size: 1rem;
   height: 350px;
+  color: #495e57;
 }
 
 .foodcard {
@@ -104,7 +104,6 @@ border-radius: 8px;
 
 .weekly-specials {
   max-width: 100%;
-  padding-bottom: 7em;
 }
 
 .weekly-specials img {
@@ -112,40 +111,73 @@ border-radius: 8px;
   height: 200px;
 }
 
-.specials-title {
-text-align: left;
-}
-
 .testimonials {
+  max-width: 100%;
   background-color: #edefee;
 }
 
 .testimonial-title{
 text-align: center;
+padding-top: 2em;
+margin: 5em;
+font-family: markazi;
+font-size: 3rem;
 }
 
 .testimonial-card {
 display: flex;
 justify-content: center;
 align-items: center;
+padding-bottom: 6em;
+font-family: karla;
+color: #495e57;
+}
+
+.testimonial-profile {
+  text-align: center;
 }
 
 .testimonial-pic {
-  width: 10%;
+  width: 50%;
   height: auto;
+  border-radius: 8px;
 }
 
-.about-pic1, .about-pic2 {
-  width: 20%;
-  height: auto;
+
+.about-title {
+  font-size: 3rem;
+  font-family: markazi;
+  margin-bottom: -.7em;
+}
+
+.about-city {
+  font-size: 2rem;
+  font-family: markazi;
+}
+
+.about-article {
+  font-size: 1.2rem;
+  font-family: karla;
+  color: #495e57;
+}
+
+.about-pic1 {
+width: 20%;
+}
+
+.about-pic2 {
+ width: 20%;
 }
 
 .footer {
   background-color: #edefee;
   display: grid;
+  justify-content: space-evenly;
   grid-column-start: 1;
   grid-column-end: 3;
-  gap: 20px;
+  font-family: karla;
+  text-decoration: underline;
+  color: #495e57;
 }
 
 .footer1 {

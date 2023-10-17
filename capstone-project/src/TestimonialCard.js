@@ -9,25 +9,25 @@ function TestimonialCard() {
           image: Male,
           name: "John",
           rating: "5/5",
-          reviewText: "Best food I have ever had!",
+          reviewText: '"Best food I have ever had!"',
         },
         {
           image: Female,
           name: "Jane",
           rating: "5/5",
-          reviewText: "Staff was excellent and the food was delectable",
+          reviewText: '"Staff was excellent and the food was delectable."',
         },
         {
           image: Male,
           name: "Rick",
           rating: "4/5",
-          reviewText: "Seating wasn't the best, but the food was amazing.",
+          reviewText: '"Seating wasn\'t the best, but the food was amazing."',
         },
         {
           image: Female,
           name: "Rihanna",
           rating: "5/5",
-          reviewText: "YOU MUST TRY THIS RESTAURANT!!!",
+          reviewText: '"YOU MUST TRY THIS RESTAURANT!!!"',
         }
       ];
       return (
@@ -37,7 +37,7 @@ function TestimonialCard() {
               <img className="testimonial-pic" src={props.image} alt="profile" />
               <h3>Name: {props.name}</h3>
               <h3>Rating: {props.rating}&#9734;</h3>
-              <p>Testimonial: {props.reviewText}</p>
+              <p>{props.reviewText}</p>
             </div>
           ))}
         </>

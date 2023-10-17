@@ -40,13 +40,17 @@ function HomePage() {
         </div>
       </section>
       <section className="about-section">
-        <h2>Little Lemon</h2>
-        <h3>Chicago</h3>
-        <article>
-          Mollit adipisicing incididunt mollit sunt aute ipsum nostrud ex ipsum pariatur tempor ea cillum nulla. Dolore cupidatat sit ullamco incididunt eu laborum deserunt occaecat ad aliquip consectetur. Veniam nostrud ipsum occaecat et quis irure est ea commodo fugiat quis fugiat veniam duis. Non duis consequat ut irure ea elit ipsum labore.
+        <div className="left-column2">
+        <h2 className="about-title">Little Lemon</h2>
+        <h3 className="about-city">Chicago</h3>
+        <article className="about-article">
+        Little Lemon is a charming Mediterranean gem nestled in the heart of Chicago. This restaurant exudes the essence of the Mediterranean with its warm, rustic ambiance and delectable cuisine. The moment you step inside, you're enveloped by the enticing aroma of freshly baked pita bread and savory spices. Little Lemon's menu offers a delightful array of Mediterranean delicacies.
         </article>
+        </div>
+        <div>
         <img className="about-pic1" src={AboutA} alt=""/>
         <img className="about-pic2" src={AboutB} alt=""/>
+        </div>
       </section>
     </>
   );
