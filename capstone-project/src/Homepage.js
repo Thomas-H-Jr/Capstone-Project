@@ -11,22 +11,33 @@ function HomePage() {
   return (
     <>
       <section className="hero-section">
+        <div className="left-column">
         <h1 className="restaurant">Little Lemon</h1>
         <h2 className="city">Chicago</h2>
         <p className="summary">
-          We are a family owned Medditerranean restaurant, focused on
-          traditional recipes served with a modern twist.
+          We are a family owned Medditerranean restaurant, <br/>focused on
+          traditional recipes served with a <br/>modern twist.
         </p>
-        <Button className="reserve-button">Reserve Table</Button>
+        <div className="reserve-button">
+        <Button>Reserve Table</Button>
+        </div>
+        </div>
         <img className="hero-image" src={heroFood} alt="food presentation" />
       </section>
       <section className="weekly-specials">
+      <div className="specials-header">
       <h2 className="specials-title">This weeks specials!</h2>
+      <Button className="menu-button" type="button">Online Menu</Button>
+      </div>
+      <div className="foodcard">
      <FoodCard />
+     </div>
       </section>
       <section className="testimonials">
-        <h2 className="specials-title">Testimonials</h2>
+        <h2 className="testimonial-title">Testimonials</h2>
+        <div className="testimonial-card">
         <TestimonialCard />
+        </div>
       </section>
       <section className="about-section">
         <h2>Little Lemon</h2>

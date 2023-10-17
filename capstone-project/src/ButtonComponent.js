@@ -7,7 +7,7 @@ const handleClick = () => {
     setActive(!active);
 };
     return (
-        <button className={colorChange} onClick={handleClick} style={{backgroundColor: active ? "#495E57" : "#F4CE14", color: active ? "white" : "black"}} type="button">{children}</button>
+        <button className={colorChange} onClick={handleClick} style={{backgroundColor: active ? "#495E57" : "#F4CE14", color: active ? "white" : "black", borderRadius: "6px", fontSize: "2rem", textAlign: "center"}} type="button">{children}</button>
     )
 }
 

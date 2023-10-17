@@ -3,7 +3,7 @@ import logo from "./Pictures/Logo.svg";
 
 function Header() {
   return (
-    <a href="home">
+    <a href="/">
       <img className="logo" src={logo} alt="Logo" />
     </a>
   );
