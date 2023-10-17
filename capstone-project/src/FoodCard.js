@@ -22,7 +22,7 @@ description: "This comes straight from grandma’s recipe book, every last ingre
 return (
     <>
     {specials.map((props, index) => (
-        <div key={index}>
+        <div key={index} className="foodcard-layout">
           <img src={props.image} alt="weekly specials" />
           <h3>{props.dish}</h3>
           <p>{props.description}</p>

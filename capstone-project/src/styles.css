@@ -52,9 +52,6 @@
   margin: 20px 0 50px 0;
 }
 
-.reserve-button {
-}
-
 .hero-image {
   width: 25%;
   height: auto;
@@ -62,11 +59,52 @@
   margin: 20px 250px 20px 0
 }
 
+.weekly-specials {
+
+}
+
+.specials-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  text-align: center;
+  flex-direction: row;
+  margin: 5% 5%;
+}
+
+.specials-title {
+  font-size: 3rem;
+}
+
+.menu-button {
+background-color: #f4ce14;
+font-size: 3em;
+border-radius: 8px;
+}
+
+.foodcard-layout {
+  background-color: #edefee;
+  border-style: solid;
+  border-radius: 8px;
+  margin: 3em;
+  text-align: center;
+  max-width: 18%;
+  word-wrap: break-word;
+  font-family: karla;
+  font-size: 1rem;
+  height: 350px;
+}
+
 .foodcard {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: baseline;
+}
+
+.weekly-specials {
+  max-width: 100%;
+  padding-bottom: 7em;
 }
 
 .weekly-specials img {

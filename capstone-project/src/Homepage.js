@@ -27,7 +27,7 @@ function HomePage() {
       <section className="weekly-specials">
       <div className="specials-header">
       <h2 className="specials-title">This weeks specials!</h2>
-      <Button className="menu-button" type="button">Online Menu</Button>
+      <button className="menu-button" type="button">Online Menu</button>
       </div>
       <div className="foodcard">
      <FoodCard />
