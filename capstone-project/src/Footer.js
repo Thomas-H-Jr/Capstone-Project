@@ -1,9 +1,15 @@
 import React from "react";
+import Logo2 from "./Pictures/Logo2.png"
 
 function Footer() {
   return (
     <>
     <div className="footer">
+      <div className="logo2">
+        <a href="/">
+      <img  src={Logo2} alt="footer logo"/>
+      </a>
+      </div>
       <section className="footer1">
       <h3>Little Lemon</h3>
         <ul className="footer-nav">
