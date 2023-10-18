@@ -98,7 +98,7 @@
   font-family: markazi;
   color: #edefee;
   font-size: 3rem;
-  margin-top: -30px;
+  margin-top: -1em;
 }
 
 .summary {
@@ -180,6 +180,7 @@
   max-width: 100%;
   background-color: #edefee;
   padding: 5em;
+  border: solid #495e57;
 }
 
 .testimonial-title {
@@ -214,6 +215,7 @@
   grid-template-columns: 1fr 1fr;
   padding: 12em;
   justify-content: space-between;
+  border: solid #495e57;
 }
 
 .about-column {
