@@ -1,3 +1,5 @@
+/* Home Page Styles */
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -18,7 +20,56 @@
 }
 
 @media screen and (max-width: 640px) {
-  
+  .logo {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    text-align: left;
+  }
+
+  .mobile-logo {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    text-align: left;
+  }
+
+  .mobile-logo {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 .hero-section {
@@ -68,7 +119,7 @@
   width: 25%;
   height: auto;
   border-radius: 8px;
-  margin: 20px 250px 20px 0
+  margin: 20px 250px 20px 0;
 }
 
 .weekly-specials {
@@ -92,10 +143,10 @@
 }
 
 .menu-button {
-background-color: #f4ce14;
-font-size: 3em;
-border-radius: 8px;
-font-family: karla;
+  background-color: #f4ce14;
+  font-size: 3em;
+  border-radius: 8px;
+  font-family: karla;
 }
 
 .foodcard-layout {
@@ -131,21 +182,21 @@ font-family: karla;
   padding: 5em;
 }
 
-.testimonial-title{
-text-align: center;
-/* padding-top: 2em; */
-margin: 2.5em;
-font-family: markazi;
-font-size: 3rem;
+.testimonial-title {
+  text-align: center;
+  /* padding-top: 2em; */
+  margin: 2.5em;
+  font-family: markazi;
+  font-size: 3rem;
 }
 
 .testimonial-card {
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-padding-bottom: 6em;
-font-family: karla;
-color: #495e57;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 6em;
+  font-family: karla;
+  color: #495e57;
 }
 
 .testimonial-profile {
@@ -166,13 +217,13 @@ color: #495e57;
 }
 
 .about-column {
-align-items: center;
+  align-items: center;
 }
 
 .about-title {
   font-size: 3rem;
   font-family: markazi;
-  margin-bottom: -.7em;
+  margin-bottom: -0.7em;
   color: #495e57;
 }
 
@@ -189,11 +240,11 @@ align-items: center;
 }
 
 .about-pic-column {
-margin: 0 0 0 8em;
-align-items: center;
-position: relative;
-top: 0;
-right: 0;
+  margin: 0 0 0 8em;
+  align-items: center;
+  position: relative;
+  top: 0;
+  right: 0;
 }
 
 .about-pic1 {
@@ -248,7 +299,9 @@ right: 0;
   grid-row: 1;
 }
 
-.footer-nav,  .contact-us, .socials{
+.footer-nav,
+.contact-us,
+.socials {
   margin-top: -1em;
   text-align: center;
   padding: 0;
@@ -265,4 +318,53 @@ a {
 
 a:link {
   text-decoration: none;
+}
+
+/* Reservation Page Styles */
+
+.booking-title {
+  text-align: center;
+  font-family: markazi;
+  color: #495e57;
+  text-decoration: underline;
+  font-size: 3.5em;
+}
+
+.booking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: karla;
+}
+
+.fieldset-container div {
+  margin: 5%;
+  padding: 0 3em;
+}
+
+.fullname,
+.email,
+.telephone,
+.guests,
+.occasion,
+.date-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.reserve-submit {
+  font-size: 2em;
+  background-color: #f4ce14;
+  border-radius: 8px;
+  font-family: karla;
+  text-align: center;
+  margin: 0.5em;
+}
+
+span {
+  color: red;
 }
