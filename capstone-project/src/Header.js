@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "./Pictures/Logo.svg";
 import Hamburger from "./Pictures/HamburgerIcon.svg";
 
 function Header() {
   return (
     <>
-      <a href="/">
+      <Link to="/">
         <img className="logo" src={logo} alt="Logo" />
-      </a>
+      </Link>
       <div className="mobile-header">
         <div className="hamburger">
           <img src={Hamburger} alt="mobile menu icon" />

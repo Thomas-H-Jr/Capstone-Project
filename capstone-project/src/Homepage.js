@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FoodCard from "./FoodCard";
 import TestimonialCard from "./TestimonialCard";
 import AboutA from "./Pictures/AboutA.jpg";
@@ -17,18 +18,22 @@ function HomePage() {
             focused on traditional recipes served with a <br />
             modern twist.
           </p>
-          <button className="reserve-button" type="button">
-            Reserve Table
-          </button>
+          <Link to="reservations">
+            <button className="reserve-button" type="button">
+              Reserve Table
+            </button>
+          </Link>
         </div>
         <img className="hero-image" src={heroFood} alt="food presentation" />
       </section>
       <section className="weekly-specials">
         <div className="specials-header">
           <h2 className="specials-title">This weeks specials!</h2>
-          <button className="menu-button" type="button">
-            Online Menu
-          </button>
+          <Link to="menu">
+            <button className="menu-button" type="button">
+              Online Menu
+            </button>
+          </Link>
         </div>
         <div className="foodcard">
           <FoodCard />
