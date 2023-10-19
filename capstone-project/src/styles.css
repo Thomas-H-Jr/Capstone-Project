@@ -341,20 +341,16 @@ a:link {
   font-family: karla;
 }
 
-.fieldset-container div {
+.fieldset-container {
   margin: 5%;
   padding: 0 2em;
 }
 
-.fullname,
-.email,
-.telephone,
-.guests,
-.occasion,
-.date-time {
+.form-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   text-align: left;
   text-wrap: nowrap;
 }
@@ -364,6 +360,8 @@ a:link {
   background-color: #f4ce14;
   border-radius: 8px;
   font-family: karla;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 0.5em;
 }
