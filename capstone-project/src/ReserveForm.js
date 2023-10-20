@@ -1,23 +1,24 @@
 import React from "react";
 import { useState } from "react";
 
-function ReserveForm() {
+function ReserveForm({ availableTimes, setAvailableTimes }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [occasion, setOccasion] = useState("");
   const [guests, setGuests] = useState("");
   const [date, setDate] = useState("");
-  const [availableTimes, setAvailableTimes] = useState([]);
+  const [time, setTime] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setName = "";
-    setEmail = "";
-    setPhone = "";
-    setOccasion = "";
-    setGuests = "";
-    setDate = "";
+    setName("");
+    setEmail("");
+    setPhone("");
+    setOccasion("");
+    setGuests("");
+    setDate("");
+    setTime("");
   };
   return (
     <>
@@ -90,21 +91,26 @@ function ReserveForm() {
               type="date"
               name="date"
               value={date}
-              onChange={(e) => setDate(e.target.value)}
+              onChange={(e) => {
+                setDate(e.target.value);
+                setTime("");
+                setAvailableTimes([]);
+              }}
               required></input>
           </div>
           <div className="form-group">
             <label htmlFor="time">
               Choose Time:<span>*</span>{" "}
             </label>
-            <select value={availableTimes} onChange={(e) => setAvailableTimes(e.target.value)}>
-              <option>Select a time</option>
-              <option>5:00pm</option>
-              <option>6:00pm</option>
-              <option>7:00pm</option>
-              <option>8:00pm</option>
-              <option>9:00pm</option>
-              <option>10:00pm</option>
+            <select value={time} onChange={(e) => setTime(e.target.value)} required>
+              <option value="" disabled>
+                Select a time
+              </option>
+              {availableTimes.map((time) => (
+                <option key={time} value={time}>
+                  {time}
+                </option>
+              ))}
             </select>
           </div>
         </fieldset>

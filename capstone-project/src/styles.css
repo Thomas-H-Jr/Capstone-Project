@@ -330,7 +330,7 @@ a:link {
   font-family: markazi;
   color: #495e57;
   text-decoration: underline;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 
 .booking-form {
@@ -342,8 +342,8 @@ a:link {
 }
 
 .fieldset-container {
-  margin: 5%;
-  padding: 0 2em;
+  margin: -0.5em;
+  padding: 1em;
 }
 
 .form-group {
@@ -353,6 +353,14 @@ a:link {
   align-items: center;
   text-align: left;
   text-wrap: nowrap;
+}
+
+.form-group label {
+  padding-right: 3em;
+}
+
+.form-group input {
+  margin: 1.5em 0;
 }
 
 .reserve-submit {
