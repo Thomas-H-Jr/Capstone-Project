@@ -25,12 +25,13 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
       <form className="booking-form" onSubmit={handleSubmit}>
         <fieldset className="fieldset-container">
           <div className="form-group">
-            <label className="fullname-text" htmlFor="fname">
+            <label className="fullname-text" htmlFor="full-name-input">
               Full Name:<span>*</span>{" "}
             </label>
             <input
               className="fullname-input"
               type="text"
+              id="full-name-input"
               name="fname"
               min="1"
               value={name}
@@ -38,31 +39,36 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
               required></input>
           </div>
           <div className="form-group">
-            <label htmlFor="email">
+            <label htmlFor="email-input">
               Email:<span>*</span>{" "}
             </label>
             <input
               className="email-input"
               type="email"
+              id="email-input"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required></input>
           </div>
           <div className="form-group">
-            <label htmlFor="telephone">
+            <label htmlFor="telephone-input">
               Telephone:<span>*</span>{" "}
             </label>
             <input
               type="tel"
+              id="telephone-input"
               name="telephone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required></input>
           </div>
           <div className="form-group">
-            <label htmlFor="occasion">Occasion:</label>
-            <select value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+            <label htmlFor="occasion-input">Occasion:</label>
+            <select
+              id="occasion-input"
+              value={occasion}
+              onChange={(e) => setOccasion(e.target.value)}>
               <option>Select an occasion</option>
               <option>Birthday</option>
               <option>Anniversary</option>
@@ -70,11 +76,12 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="guests">
+            <label htmlFor="guests-input">
               Number of Guests:<span>*</span>{" "}
             </label>
             <input
               type="number"
+              id="guests-input"
               name="guests"
               min="1"
               max="12"
@@ -84,11 +91,12 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
               required></input>
           </div>
           <div className="form-group">
-            <label htmlFor="date">
+            <label htmlFor="date-input">
               Choose Date:<span>*</span>{" "}
             </label>
             <input
               type="date"
+              id="date-input"
               name="date"
               value={date}
               onChange={(e) => {
@@ -99,22 +107,23 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
               required></input>
           </div>
           <div className="form-group">
-            <label htmlFor="time">
+            <label htmlFor="time-input">
               Choose Time:<span>*</span>{" "}
             </label>
-            <select value={time} onChange={(e) => setTime(e.target.value)} required>
+            <select id="time-input" value={time} onChange={(e) => setTime(e.target.value)} required>
               <option value="" disabled>
                 Select a time
               </option>
-              {availableTimes.map((time) => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
-              ))}
+              {Array.isArray(availableTimes) &&
+                availableTimes.map((time) => (
+                  <option key={time} value={time} className="time-option">
+                    {time}
+                  </option>
+                ))}
             </select>
           </div>
         </fieldset>
-        <input className="reserve-submit" type="submit" name="submit"></input>
+        <input role="button" className="reserve-submit" type="submit" name="submit"></input>
       </form>
     </>
   );
