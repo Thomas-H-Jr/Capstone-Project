@@ -24,12 +24,12 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="menu" element={<MenuPage />} />
         <Route path="reservations" element={<ReservationsPage />} />
-        <Route path="order-online" element={<OrderPage />} />
-        <Route path="login" element={<LoginPage />} />
         <Route
           path="reservations/:reservation-confirmation"
           element={<ReservationConfirmation />}
         />
+        <Route path="order-online" element={<OrderPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </>

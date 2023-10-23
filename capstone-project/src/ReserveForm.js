@@ -1,19 +1,38 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-function ReserveForm({ availableTimes, setAvailableTimes }) {
+function ReserveForm({
+  availableTimes,
+  setAvailableTimes,
+  selectedDate,
+  setSelectedDate,
+  onSubmit,
+}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [occasion, setOccasion] = useState("");
   const [guests, setGuests] = useState("");
-  const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const navigate = useNavigate();
+
+  const handleDateChange = (newDate) => {
+    setSelectedDate(newDate);
+    setTime("");
+    setAvailableTimes([]);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("reservation-confirmation");
+    const formData = {
+      name,
+      email,
+      phone,
+      occasion,
+      guests,
+      date: selectedDate,
+      time,
+    };
+    onSubmit(formData);
+    console.log(formData);
   };
   return (
     <>
@@ -94,12 +113,8 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
               type="date"
               id="date-input"
               name="date"
-              value={date}
-              onChange={(e) => {
-                setDate(e.target.value);
-                setTime("");
-                setAvailableTimes([]);
-              }}
+              value={selectedDate}
+              onChange={(e) => handleDateChange(e.target.value)}
               required></input>
           </div>
           <div className="form-group">

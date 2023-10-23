@@ -4,18 +4,11 @@ import ReservationsPage from "./Reservationspage";
 import { act } from "react-dom/test-utils";
 
 test("initializeTimes returns expected array", () => {
-  const mockInitializeTimes = jest.fn(() => [
-    "5:00pm",
-    "6:00pm",
-    "7:00pm",
-    "8:00pm",
-    "9:00pm",
-    "10:00pm",
-  ]);
+  const mockInitializeTimes = jest.fn(() => ["10:00", "11:00", "12:00", "14:00", "15:00", "16:00"]);
   ReservationsPage.initializeTimes = mockInitializeTimes;
   render(<ReservationsPage />);
   const times = mockInitializeTimes();
-  const expectedTimes = ["5:00pm", "6:00pm", "7:00pm", "8:00pm", "9:00pm", "10:00pm"];
+  const expectedTimes = ["10:00", "11:00", "12:00", "14:00", "15:00", "16:00"];
   expect(times).toEqual(expectedTimes);
 });
 
@@ -39,7 +32,7 @@ test("To validate updateTimes returns the value that is provided in the state", 
 
 test("ReserveForm can be submitted by a user", () => {
   const mockSetAvailableTimes = jest.fn();
-  const mockAvailableTimes = ["12:00 PM", "1:00 PM", "2:00 PM"];
+  const mockAvailableTimes = ["14:00", "15:00", "16:00"];
   render(
     <ReserveForm availableTimes={mockAvailableTimes} setAvailableTimes={mockSetAvailableTimes} />
   );
@@ -59,8 +52,8 @@ test("ReserveForm can be submitted by a user", () => {
   fireEvent.change(phoneInput, { target: { value: "1234567890" } });
   fireEvent.change(occasionSelect, { target: { value: "Birthday" } });
   fireEvent.change(guestsInput, { target: { value: "4" } });
-  fireEvent.change(dateInput, { target: { value: "2023-10-21" } });
-  fireEvent.change(timeSelect, { target: { value: "12:00 PM" } });
+  fireEvent.change(dateInput, { target: { value: "2023-10-23" } });
+  fireEvent.change(timeSelect, { target: { value: "12:00" } });
 
   fireEvent.click(submitButton);
 
