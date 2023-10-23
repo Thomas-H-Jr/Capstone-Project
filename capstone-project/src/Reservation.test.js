@@ -52,7 +52,7 @@ test("ReserveForm can be submitted by a user", () => {
   const dateInput = screen.getByLabelText("Choose Date:*");
   const timeSelect = screen.getByLabelText("Choose Time:*");
 
-  const submitButton = screen.getByRole("button");
+  const submitButton = screen.getByText("Submit");
 
   fireEvent.change(nameInput, { target: { value: "John Doe" } });
   fireEvent.change(emailInput, { target: { value: "john@example.com" } });

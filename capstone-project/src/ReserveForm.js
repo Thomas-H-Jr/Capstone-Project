@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ReserveForm({ availableTimes, setAvailableTimes }) {
   const [name, setName] = useState("");
@@ -9,16 +9,11 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
   const [guests, setGuests] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setName("");
-    setEmail("");
-    setPhone("");
-    setOccasion("");
-    setGuests("");
-    setDate("");
-    setTime("");
+    navigate("reservation-confirmation");
   };
   return (
     <>
@@ -60,6 +55,7 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
               id="telephone-input"
               name="telephone"
               value={phone}
+              min="10"
               onChange={(e) => setPhone(e.target.value)}
               required></input>
           </div>
@@ -123,7 +119,9 @@ function ReserveForm({ availableTimes, setAvailableTimes }) {
             </select>
           </div>
         </fieldset>
-        <input role="button" className="reserve-submit" type="submit" name="submit"></input>
+        <button className="reserve-submit" type="submit" name="submit">
+          Submit
+        </button>
       </form>
     </>
   );
