@@ -363,6 +363,24 @@ a:link {
   margin: 1.5em 0;
 }
 
+/* #full-name-input,
+#email-input,
+#guests-input,
+#date-input,
+#time-input,
+input:focus:valid {
+  border: 2px solid greenyellow;
+} */
+
+/* #full-name-input,
+#email-input,
+#guests-input,
+#date-input,
+#time-input,
+input:focus:invalid {
+  border: 2px solid red;
+} */
+
 .reserve-submit {
   font-size: 2em;
   background-color: #f4ce14;

@@ -47,7 +47,8 @@ function ReserveForm({
               type="text"
               id="full-name-input"
               name="fname"
-              min="1"
+              minLength="2"
+              placeholder="John Doe"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required></input>
@@ -61,22 +62,21 @@ function ReserveForm({
               type="email"
               id="email-input"
               name="email"
+              placeholder="Example@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required></input>
           </div>
           <div className="form-group">
-            <label htmlFor="telephone-input">
-              Telephone:<span>*</span>{" "}
-            </label>
+            <label htmlFor="telephone-input">Telephone: </label>
             <input
               type="tel"
               id="telephone-input"
               name="telephone"
+              placeholder="optional"
               value={phone}
-              min="10"
-              onChange={(e) => setPhone(e.target.value)}
-              required></input>
+              minLength="10"
+              onChange={(e) => setPhone(e.target.value)}></input>
           </div>
           <div className="form-group">
             <label htmlFor="occasion-input">Occasion:</label>

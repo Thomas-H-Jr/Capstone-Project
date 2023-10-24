@@ -51,7 +51,7 @@ test("ReserveForm can be submitted by a user", () => {
 
   const nameInput = screen.getByLabelText("Full Name:*");
   const emailInput = screen.getByLabelText("Email:*");
-  const phoneInput = screen.getByLabelText("Telephone:*");
+  const phoneInput = screen.getByLabelText("Telephone:");
   const occasionSelect = screen.getByLabelText("Occasion:");
   const guestsInput = screen.getByLabelText("Number of Guests:*");
   const dateInput = screen.getByLabelText("Choose Date:*");
