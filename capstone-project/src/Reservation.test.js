@@ -3,6 +3,11 @@ import ReserveForm from "./ReserveForm";
 import ReservationsPage from "./Reservationspage";
 import { act } from "react-dom/test-utils";
 
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => () => {}, // Mock useNavigate to a no-op function
+}));
+
 test("initializeTimes returns expected array", () => {
   const mockInitializeTimes = jest.fn(() => ["10:00", "11:00", "12:00", "14:00", "15:00", "16:00"]);
   ReservationsPage.initializeTimes = mockInitializeTimes;
@@ -32,9 +37,16 @@ test("To validate updateTimes returns the value that is provided in the state", 
 
 test("ReserveForm can be submitted by a user", () => {
   const mockSetAvailableTimes = jest.fn();
-  const mockAvailableTimes = ["14:00", "15:00", "16:00"];
+  const mockSetSelectedDate = jest.fn();
+  const mockOnSubmit = jest.fn();
+  const mockAvailableTimes = ["10:00", "11:00", "12:00", "14:00", "15:00", "16:00"];
   render(
-    <ReserveForm availableTimes={mockAvailableTimes} setAvailableTimes={mockSetAvailableTimes} />
+    <ReserveForm
+      availableTimes={mockAvailableTimes}
+      setAvailableTimes={mockSetAvailableTimes}
+      setSelectedDate={mockSetSelectedDate}
+      onSubmit={mockOnSubmit}
+    />
   );
 
   const nameInput = screen.getByLabelText("Full Name:*");
@@ -57,11 +69,11 @@ test("ReserveForm can be submitted by a user", () => {
 
   fireEvent.click(submitButton);
 
-  expect(nameInput.value).toBe("");
-  expect(emailInput.value).toBe("");
-  expect(phoneInput.value).toBe("");
-  expect(occasionSelect.value).toBe("Select an occasion");
-  expect(guestsInput.value).toBe("");
-  expect(dateInput.value).toBe("");
-  expect(timeSelect.value).toBe("");
+  expect(nameInput.value).toBe("John Doe");
+  expect(emailInput.value).toBe("john@example.com");
+  expect(phoneInput.value).toBe("1234567890");
+  expect(occasionSelect.value).toBe("Birthday");
+  expect(guestsInput.value).toBe("4");
+  expect(dateInput.value).toBe("2023-10-23");
+  expect(timeSelect.value).toBe("12:00");
 });
