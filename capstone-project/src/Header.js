@@ -10,11 +10,11 @@ function Header() {
         <img className="logo" src={logo} alt="Logo" />
       </Link>
       <div className="mobile-header">
-        <div className="hamburger">
-          <img src={Hamburger} alt="mobile menu icon" />
+        <div>
+          <img className="hamburger" src={Hamburger} alt="mobile menu icon" />
         </div>
-        <div className="mobile-logo">
-          <img src={logo} alt="mobile logo" />
+        <div>
+          <img className="mobile-logo" src={logo} alt="mobile logo" />
         </div>
       </div>
     </>
