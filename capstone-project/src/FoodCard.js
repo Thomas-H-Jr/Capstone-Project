@@ -29,7 +29,7 @@ function FoodCard() {
       {specials.map((props, index) => (
         <div key={index} className="foodcard-layout">
           <img src={props.image} alt="weekly specials" />
-          <h3>{props.dish}</h3>
+          <h3 className="foodcard-title">{props.dish}</h3>
           <p>{props.description}</p>
         </div>
       ))}

@@ -15,6 +15,7 @@
   font-family: markazi;
   color: #edefee;
   font-size: 3rem;
+  font-weight: bolder;
   margin-top: -1em;
 }
 
@@ -22,6 +23,7 @@
   color: #edefee;
   font-family: karla;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .reserve-button {
@@ -29,6 +31,11 @@
   font-family: karla;
   border-radius: 8px;
   font-size: 3em;
+}
+
+.reserve-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 /* Weekly Specials Styles */
@@ -45,13 +52,23 @@
   white-space: nowrap;
 }
 
+.menu-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
 .foodcard-layout {
   background-color: #edefee;
   border-style: solid;
   border-radius: 8px;
   font-family: karla;
+  font-weight: bold;
   font-size: 1rem;
   color: #495e57;
+}
+
+.foodcard-title {
+  text-decoration: underline;
 }
 
 .weekly-specials img {
@@ -72,6 +89,7 @@
 
 .testimonial-card {
   font-family: karla;
+  font-weight: bold;
   color: #495e57;
   text-align: center;
 }
@@ -159,6 +177,130 @@
 
 .footer a {
   color: #495e57;
+}
+
+/* Reservation Page Styles */
+
+.booking-title {
+  text-align: center;
+  font-family: markazi;
+  color: #495e57;
+  text-decoration: underline;
+  font-size: 3em;
+}
+
+.booking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: karla;
+}
+
+.fieldset-container {
+  margin: -0.5em;
+  padding: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.form-group label {
+  padding-right: 3em;
+}
+
+.form-group input {
+  margin: 1.5em 0;
+}
+
+.reserve-submit {
+  font-size: 2em;
+  background-color: #f4ce14;
+  border-radius: 8px;
+  font-family: karla;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.reserve-submit:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.confirmation-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.confirmation-title {
+  text-align: center;
+  font-size: 3em;
+  font-family: markazi;
+  text-decoration: underline;
+  color: #495e57;
+  margin-bottom: -0.1em;
+}
+
+.confirmation-img {
+  text-align: center;
+  max-width: 20%;
+  margin: 2.5em 0;
+}
+
+span {
+  color: red;
+}
+
+/* About Page Styles */
+
+.about-page-title {
+  color: #495e57;
+  font-family: markazi;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: underline;
+  margin: 5em 0;
+}
+
+/* Menu Styles */
+
+.menu-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Order Styles */
+
+.order-title {
+  color: #495e57;
+  font-family: markazi;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: underline;
+  margin: 5em 0;
+}
+
+/* Login Styles */
+
+.login-title {
+  color: #495e57;
+  font-family: markazi;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: underline;
+  margin: 5em 0;
 }
 
 /* Global Styles */
@@ -514,6 +656,7 @@ a:link {
   .foodcard-layout {
     margin: 0 3.5em;
     text-align: center;
+    font-size: 1.2rem;
   }
 
   .weekly-specials img {
@@ -588,122 +731,237 @@ a:link {
   }
 }
 
-/* Reservation Page Styles */
+@media screen and (min-width: 1720px) {
+  /* Header and Nav */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 1.5em 0em;
+    white-space: nowrap;
+  }
 
-.booking-title {
-  text-align: center;
-  font-family: markazi;
-  color: #495e57;
-  text-decoration: underline;
-  font-size: 3em;
-}
+  .logo,
+  .nav {
+    max-width: 100%;
+  }
 
-.booking-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: karla;
-}
+  .logo {
+    width: 250px;
+    height: auto;
+  }
 
-.fieldset-container {
-  margin: -0.5em;
-  padding: 1em;
-}
+  .nav {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    font-size: 2rem;
+    font-family: karla;
+  }
 
-.form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  text-wrap: nowrap;
-}
+  .mobile-header {
+    display: none;
+  }
 
-.form-group label {
-  padding-right: 3em;
-}
+  /* Home Page Styles */
+  .hero-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
 
-.form-group input {
-  margin: 1.5em 0;
-}
+  .left-column {
+    grid-column: 2;
+    grid-row: 1;
+    white-space: nowrap;
+  }
 
-.reserve-submit {
-  font-size: 2em;
-  background-color: #f4ce14;
-  border-radius: 8px;
-  font-family: karla;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0.5em;
-}
+  .left-column,
+  .hero-image {
+    margin: 3em 4.9em;
+  }
 
-.confirmation-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-}
+  .hero-image {
+    grid-column: 3;
+    grid-row: 1;
+    width: 510px;
+    height: auto;
+    border-radius: 8px;
+  }
 
-.confirmation-title {
-  text-align: center;
-  font-size: 3em;
-  font-family: markazi;
-  text-decoration: underline;
-  color: #495e57;
-  margin-bottom: -0.1em;
-}
+  .reserve-button {
+    margin-top: 0.5em;
+    white-space: nowrap;
+  }
 
-.confirmation-img {
-  text-align: center;
-  max-width: 20%;
-  margin: 2.5em 0;
-}
+  /* Weekly Specials Styles */
+  .weekly-specials {
+    max-width: 100%;
+  }
 
-span {
-  color: red;
-}
+  .specials-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    text-align: center;
+    margin: 5em 1em;
+  }
 
-/* About Page Styles */
+  .specials-title {
+    text-align: left;
+  }
 
-.about-page-title {
-  color: #495e57;
-  font-family: markazi;
-  font-size: 3em;
-  text-align: center;
-  text-decoration: underline;
-  margin: 5em 0;
-}
+  .foodcard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 1;
+    max-width: 100%;
+    margin: 6em 0;
+  }
 
-/* Menu Styles */
+  .foodcard-layout {
+    margin: 0 3.5em;
+    text-align: center;
+  }
 
-.menu-group {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .weekly-specials img {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+  }
 
-/* Order Styles */
+  /* Testimonials Styles */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
 
-.order-title {
-  color: #495e57;
-  font-family: markazi;
-  font-size: 3em;
-  text-align: center;
-  text-decoration: underline;
-  margin: 5em 0;
-}
+  .testimonial-title {
+    margin-top: 1em;
+  }
 
-/* Login Styles */
+  .testimonial-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: 1;
+    margin: 8em 3em;
+    gap: 20px;
+    font-size: 1.2rem;
+  }
 
-.login-title {
-  color: #495e57;
-  font-family: markazi;
-  font-size: 3em;
-  text-align: center;
-  text-decoration: underline;
-  margin: 5em 0;
+  .testimonial-pic {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* About Styles */
+  .about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    padding: 15em;
+    justify-content: space-between;
+  }
+
+  .about-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 3rem;
+    white-space: nowrap;
+    margin-bottom: -1em;
+  }
+
+  .about-city {
+    font-size: 2.5rem;
+  }
+
+  .about-article {
+    font-size: 2rem;
+  }
+
+  .about-pic-column {
+    margin: 0 0 0 8em;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .about-pic1 {
+    width: 500px;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .about-pic2 {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 10em;
+    right: 2em;
+  }
+
+  /* Nav Styles */
+  .logo2 {
+    margin-top: 3.5em;
+  }
+
+  .footer1,
+  .footer2,
+  .footer3 {
+    font-size: 1.5rem;
+  }
+
+  /* About Page */
+  .about-page-title {
+    padding: 4.7em 0 4.7em 0;
+  }
+
+  /* Menu Page */
+  .menu-group {
+    max-width: 100%;
+    padding: 14em 0 14em 0;
+  }
+
+  /* Reservations Page */
+  .booking-title {
+    margin-top: 5em;
+  }
+
+  .booking-form {
+    margin: 0 0 15em 0;
+  }
+
+  .confirmation-title {
+    margin-top: 3em;
+  }
+
+  .confirmation-group {
+    margin-bottom: 12em;
+  }
+
+  /* Online Orders */
+  .order-title {
+    padding: 4.7em 0 4.7em 0;
+  }
+
+  /* Login Page */
+  .login-title {
+    padding: 4.7em 0 4.7em 0;
+  }
 }
