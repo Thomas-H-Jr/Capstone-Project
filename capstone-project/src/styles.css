@@ -127,6 +127,11 @@
   color: #495e57;
 }
 
+.about-pic1,
+.about-pic2 {
+  border-radius: 8px;
+}
+
 /* Footer Styles */
 .footer {
   background-color: #edefee;
