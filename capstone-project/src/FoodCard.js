@@ -1,6 +1,6 @@
 import React from "react";
 import greekSalad from "./Pictures/greeksalad.jpg";
-import bruchetta from "./Pictures/bruchetta.svg";
+import bruschetta from "./Pictures/bruschetta.jpg";
 import lemonDessert from "./Pictures/lemondessert.jpg";
 
 function FoodCard() {
@@ -12,7 +12,7 @@ function FoodCard() {
         "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
     },
     {
-      image: bruchetta,
+      image: bruschetta,
       dish: "Bruchetta",
       description:
         "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",

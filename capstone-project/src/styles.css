@@ -1,5 +1,5 @@
 /* Home Page Styles */
-
+/* Hero Styles */
 .hero-section {
   background-color: #495e57;
 }
@@ -22,33 +22,18 @@
   color: #edefee;
   font-family: karla;
   font-size: 1.5rem;
-  margin: 20px 0 50px 0;
 }
 
 .reserve-button {
   background-color: #f4ce14;
   font-family: karla;
   border-radius: 8px;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
-.weekly-specials {
-  max-width: 100%;
-  padding: 3.5em;
-}
-
-.specials-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  text-align: center;
-  flex-direction: row;
-  margin: 5% 5%;
-}
-
+/* Weekly Specials Styles */
 .specials-title {
   font-size: 3rem;
-  text-align: left;
   font-family: markazi;
 }
 
@@ -57,85 +42,58 @@
   font-size: 3em;
   border-radius: 8px;
   font-family: karla;
+  white-space: nowrap;
 }
 
 .foodcard-layout {
   background-color: #edefee;
   border-style: solid;
   border-radius: 8px;
-  margin: 3em;
-  text-align: center;
-  max-width: 19%;
-  word-wrap: break-word;
   font-family: karla;
   font-size: 1rem;
-  height: 350px;
   color: #495e57;
 }
 
-.foodcard {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-}
-
 .weekly-specials img {
-  width: 298px;
-  height: 200px;
   border-radius: 8px;
 }
 
+/* Testimonial Styles */
 .testimonials {
-  max-width: 100%;
   background-color: #edefee;
-  padding: 5em;
-  border: solid #495e57;
+  border-top: solid #495e57;
+  border-bottom: solid #495e57;
 }
 
 .testimonial-title {
-  text-align: center;
-  /* padding-top: 2em; */
-  margin: 2.5em;
   font-family: markazi;
   font-size: 3rem;
 }
 
 .testimonial-card {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-bottom: 6em;
   font-family: karla;
   color: #495e57;
-}
-
-.testimonial-profile {
   text-align: center;
 }
 
-.testimonial-pic {
-  width: 50%;
-  height: auto;
+.testimonial-profile {
+  border-style: solid;
   border-radius: 8px;
 }
 
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 12em;
-  justify-content: space-between;
-  border: solid #495e57;
+.testimonial-pic {
+  border-radius: 8px;
 }
 
-.about-column {
-  align-items: center;
+/* About Styles */
+.about-section {
+  border-top: solid #495e57;
+  border-bottom: solid #495e57;
 }
 
 .about-title {
   font-size: 3rem;
   font-family: markazi;
-  margin-bottom: -1em;
   color: #495e57;
 }
 
@@ -151,28 +109,7 @@
   color: #495e57;
 }
 
-.about-pic-column {
-  margin: 0 0 0 8em;
-  align-items: center;
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
-.about-pic1 {
-  max-width: 70%;
-  position: relative;
-  top: 0;
-  right: o;
-}
-
-.about-pic2 {
-  max-width: 70%;
-  position: absolute;
-  top: 10em;
-  right: 2em;
-}
-
+/* Footer Styles */
 .footer {
   background-color: #edefee;
   display: grid;
@@ -224,6 +161,11 @@
   color: #495e57;
 }
 
+/* Global Styles */
+main {
+  max-width: 100%;
+}
+
 a {
   color: black;
 }
@@ -232,6 +174,7 @@ a:link {
   text-decoration: none;
 }
 
+/* Responsive Screen Size Styles */
 @media screen and (max-width: 600px) {
   /* Header and Nav */
   .logo {
@@ -245,7 +188,7 @@ a:link {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px;
+    margin: 1.5em;
   }
 
   .hamburger {
@@ -257,15 +200,99 @@ a:link {
   }
 
   /* Home Page Styles */
-
+  /* Hero Section Style */
   .hero-section {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 1em;
   }
 
   .hero-image {
+    display: none;
+  }
+
+  /* Weekly Specials Styles */
+  .weekly-specials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .foodcard {
+    max-width: 75%;
+  }
+
+  .foodcard-layout {
+    margin: 3em 0;
+  }
+
+  .weekly-specials img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Testimonial Styles */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .testimonial-profile {
+    text-align: center;
+    margin: 3em;
+  }
+
+  .testimonial-card {
+    max-width: 75%;
+  }
+
+  .testimonial-pic {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* About Styles */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-city {
+    margin-top: -1em;
+  }
+
+  .about-article {
+    margin: 1em;
+  }
+
+  .about-pic-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+
+  .about-pic1 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .about-pic2 {
     display: none;
   }
 }
@@ -283,7 +310,7 @@ a:link {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px;
+    margin: 1.5em;
   }
 
   .hamburger {
@@ -294,16 +321,99 @@ a:link {
     text-align: right;
   }
 
-  /* Home Page Styles */
-
+  /* Hero Styles */
   .hero-section {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 1em;
   }
 
   .hero-image {
+    display: none;
+  }
+
+  /* Weekly Specials Styles */
+  .weekly-specials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .foodcard {
+    max-width: 75%;
+  }
+
+  .foodcard-layout {
+    margin: 3em 0;
+  }
+
+  .weekly-specials img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Testimonial Styles */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .testimonial-profile {
+    text-align: center;
+    margin: 3em;
+  }
+
+  .testimonial-card {
+    max-width: 75%;
+  }
+
+  .testimonial-pic {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* About Styles */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-city {
+    margin-top: -1em;
+  }
+
+  .about-article {
+    margin: 1em;
+  }
+
+  .about-pic-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+
+  .about-pic1 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .about-pic2 {
     display: none;
   }
 }
@@ -312,11 +422,17 @@ a:link {
   /* Header and Nav */
   .navbar {
     display: flex;
-    max-width: 100%;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
-    text-wrap: nowrap;
+    max-width: 100%;
+    margin: 1.5em 0em;
+    white-space: nowrap;
+  }
+
+  .logo,
+  .nav {
+    max-width: 100%;
   }
 
   .logo {
@@ -328,34 +444,147 @@ a:link {
     display: flex;
     gap: 20px;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-family: karla;
   }
+
   .mobile-header {
     display: none;
   }
 
   /* Home Page Styles */
-
   .hero-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
-    padding: 1em;
+    max-width: 100%;
+    text-align: center;
   }
 
   .left-column {
-    margin-bottom: 75px;
-    margin-left: 400px;
-    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .left-column,
+  .hero-image {
+    margin: 3em 4.9em;
   }
 
   .hero-image {
-    width: 25%;
+    grid-column: 3;
+    grid-row: 1;
+    width: 410px;
     height: auto;
     border-radius: 8px;
-    margin: 20px 250px 20px 0;
+  }
+
+  .reserve-button {
+    margin-top: 0.5em;
+    white-space: nowrap;
+  }
+
+  /* Weekly Specials Styles */
+  .weekly-specials {
+    max-width: 100%;
+  }
+
+  .specials-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    text-align: center;
+    margin: 5em 1em;
+  }
+
+  .specials-title {
+    text-align: left;
+  }
+
+  .foodcard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 1;
+    max-width: 100%;
+    margin: 6em 0;
+  }
+
+  .foodcard-layout {
+    margin: 0 3.5em;
+    text-align: center;
+  }
+
+  .weekly-specials img {
+    width: 450px;
+    height: auto;
+  }
+
+  /* Testimonials Styles */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .testimonial-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: 1;
+    margin: 5em 3em;
+    gap: 20px;
+  }
+
+  .testimonial-pic {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* About Styles */
+  .about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    padding: 11.5em;
+    justify-content: space-between;
+  }
+
+  .about-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-title {
+    white-space: nowrap;
+    margin-bottom: -1em;
+  }
+
+  .about-pic-column {
+    margin: 0 0 0 8em;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .about-pic1 {
+    width: 350px;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .about-pic2 {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 10em;
+    right: 2em;
   }
 }
 
