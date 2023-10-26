@@ -14,10 +14,10 @@ function Footer() {
           <h3>Little Lemon</h3>
           <ul className="footer-nav">
             <li>
-              <a href="#home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
               <a href="/menu">Menu</a>
@@ -54,10 +54,10 @@ function Footer() {
               <a href="#twitter">Twitter</a>
             </li>
             <li>
-              <a href="instagram">Instagram</a>
+              <a href="#instagram">Instagram</a>
             </li>
             <li>
-              <a href="facebook">facebook</a>
+              <a href="#facebook">facebook</a>
             </li>
           </ul>
         </section>

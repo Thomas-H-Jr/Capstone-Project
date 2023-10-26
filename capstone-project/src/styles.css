@@ -34,8 +34,7 @@
 }
 
 .reserve-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 /* Weekly Specials Styles */
@@ -53,8 +52,7 @@
 }
 
 .menu-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .foodcard-layout {
@@ -191,7 +189,6 @@
   font-family: markazi;
   color: #495e57;
   text-decoration: underline;
-  font-size: 3em;
 }
 
 .booking-form {
@@ -236,8 +233,7 @@
 }
 
 .reserve-submit:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 10px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .confirmation-group {
@@ -272,10 +268,8 @@ span {
 .about-page-title {
   color: #495e57;
   font-family: markazi;
-  font-size: 3em;
   text-align: center;
   text-decoration: underline;
-  margin: 5em 0;
 }
 
 /* Menu Styles */
@@ -354,6 +348,10 @@ a:link {
     flex-direction: column;
     text-align: center;
     padding-bottom: 1em;
+  }
+
+  .left-column {
+    text-wrap: balance;
   }
 
   .hero-image {
@@ -441,6 +439,54 @@ a:link {
 
   .about-pic2 {
     display: none;
+  }
+
+  /* About Page */
+  .about-page-title {
+    font-size: 3rem;
+    max-width: 100%;
+    height: auto;
+    margin: 5.6em 0;
+  }
+
+  /* Menu Page */
+  .menu-group {
+    max-width: 100%;
+    height: auto;
+    padding: 1.6em 0;
+  }
+
+  /* Reservations Page */
+  .booking-title {
+    margin-top: 2em;
+  }
+
+  .booking-form {
+    margin: 1.4em 0;
+  }
+
+  .confirmation-title {
+    margin-top: 3em;
+  }
+
+  .confirmation-group {
+    margin-bottom: 12em;
+  }
+
+  /* Online Orders */
+  .order-title {
+    font-size: 3rem;
+    max-width: 100%;
+    height: auto;
+    margin: 5.6em 0;
+  }
+
+  /* Login Page */
+  .login-title {
+    font-size: 3rem;
+    max-width: 100%;
+    height: auto;
+    margin: 5.6em 0;
   }
 }
 
@@ -563,6 +609,54 @@ a:link {
   .about-pic2 {
     display: none;
   }
+
+  /* About Page */
+  .about-page-title {
+    font-size: 3rem;
+    max-width: 100%;
+    height: auto;
+    margin: 5.6em 0;
+  }
+
+  /* Menu Page */
+  .menu-group {
+    max-width: 100%;
+    height: auto;
+    padding: 1.6em 0;
+  }
+
+  /* Reservations Page */
+  .booking-title {
+    margin-top: 2em;
+  }
+
+  .booking-form {
+    margin: 1.4em 0;
+  }
+
+  .confirmation-title {
+    margin-top: 3em;
+  }
+
+  .confirmation-group {
+    margin-bottom: 12em;
+  }
+
+  /* Online Orders */
+  .order-title {
+    font-size: 3rem;
+    max-width: 100%;
+    height: auto;
+    margin: 5.6em 0;
+  }
+
+  /* Login Page */
+  .login-title {
+    font-size: 3rem;
+    max-width: 100%;
+    height: auto;
+    margin: 5.6em 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -620,6 +714,7 @@ a:link {
   }
 
   .hero-image {
+    max-width: 100%;
     grid-column: 3;
     grid-row: 1;
     width: 410px;
@@ -654,18 +749,17 @@ a:link {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row: 1;
-    max-width: 100%;
     margin: 6em 0;
   }
 
   .foodcard-layout {
-    margin: 0 3.5em;
+    margin: 0 0.5em;
     text-align: center;
     font-size: 1.2rem;
   }
 
   .weekly-specials img {
-    width: 450px;
+    max-width: 100%;
     height: auto;
   }
 
@@ -720,6 +814,7 @@ a:link {
   }
 
   .about-pic1 {
+    max-width: 100%;
     width: 350px;
     height: auto;
     position: relative;
@@ -728,11 +823,50 @@ a:link {
   }
 
   .about-pic2 {
+    max-width: 100%;
     width: 350px;
     height: auto;
     position: absolute;
     top: 10em;
     right: 2em;
+  }
+
+  /* About Page */
+  .about-page-title {
+    font-size: 3em;
+    margin: 5.2em 0;
+  }
+
+  /* Menu Page */
+  .menu-group {
+    max-width: 100%;
+    padding: 0.7em 0;
+  }
+
+  /* Reservations Page */
+  .booking-title {
+    font-size: 3em;
+    margin-top: 0.6em;
+  }
+
+  .confirmation-title {
+    margin-top: 2.4em;
+  }
+
+  .confirmation-group {
+    margin-bottom: 5em;
+  }
+
+  /* Online Orders */
+  .order-title {
+    font-size: 3em;
+    margin: 5.2em 0;
+  }
+
+  /* Login Page */
+  .login-title {
+    font-size: 3em;
+    margin: 5.2em 0;
   }
 }
 
@@ -934,6 +1068,8 @@ a:link {
 
   /* About Page */
   .about-page-title {
+    font-size: 3em;
+    margin: 5em 0;
     padding: 4.7em 0 4.7em 0;
   }
 
@@ -945,6 +1081,7 @@ a:link {
 
   /* Reservations Page */
   .booking-title {
+    font-size: 3em;
     margin-top: 5em;
   }
 
